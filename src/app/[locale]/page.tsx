@@ -61,15 +61,28 @@ export default function HomePage() {
   return (
     <div className="page-enter">
       {/* ===== HERO SECTION ===== */}
-      <section className="relative min-h-screen flex items-center bg-gradient-hero overflow-hidden">
-        {/* Background Pattern */}
+      <section className="relative min-h-screen flex items-center overflow-hidden bg-navy-900">
+        {/* Background Image & Overlay */}
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,169,48,0.08),transparent_60%)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(39,60,108,0.3),transparent_60%)]" />
-          <div className="absolute top-20 right-20 w-72 h-72 bg-gold-500/5 rounded-full blur-3xl animate-float" />
-          <div className="absolute bottom-32 left-10 w-96 h-96 bg-navy-400/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
+          {/* Hero Background Image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
+          />
+          
+          {/* Elegant Dark Overlay */}
+          <div className="absolute inset-0 bg-navy-900/70" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/20 to-navy-900/60" />
+
+          {/* Existing Gradient Patterns for additional depth */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(212,169,48,0.15),transparent_60%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(39,60,108,0.4),transparent_60%)]" />
+          
+          <div className="absolute top-20 right-20 w-72 h-72 bg-gold-500/10 rounded-full blur-3xl animate-float" />
+          <div className="absolute bottom-32 left-10 w-96 h-96 bg-navy-400/20 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }} />
+          
           <div
-            className="absolute inset-0 opacity-[0.03]"
+            className="absolute inset-0 opacity-[0.05]"
             style={{
               backgroundImage: `linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)`,
               backgroundSize: '60px 60px',
@@ -202,14 +215,24 @@ export default function HomePage() {
       </section>
 
       {/* ===== WHY US ===== */}
-      <section className="py-24 lg:py-32 bg-gradient-section">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 lg:py-32 overflow-hidden bg-navy-900">
+        {/* Background Image & Overlay */}
+        <div className="absolute inset-0">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/images/tesis.jpg')" }}
+          />
+          <div className="absolute inset-0 bg-navy-900/85" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-navy-900/80" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-navy-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mb-4">
                 {t('whyUs.title')}
               </h2>
-              <p className="text-charcoal-500 text-lg max-w-2xl mx-auto">
+              <p className="text-white/70 text-lg max-w-2xl mx-auto">
                 {t('whyUs.subtitle')}
               </p>
             </div>
@@ -218,14 +241,14 @@ export default function HomePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {whyUs.map((item, i) => (
               <ScrollReveal key={i} delay={i * 100}>
-                <div className="group bg-white rounded-2xl p-8 shadow-lg shadow-navy-900/5 hover:shadow-xl border border-navy-50 transition-all duration-500 hover:-translate-y-1 h-full">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-navy-800 to-navy-900 flex items-center justify-center mb-6 group-hover:from-gold-500 group-hover:to-gold-400 transition-all duration-500 shadow-lg shadow-navy-900/20 group-hover:shadow-gold-500/20">
+                <div className="group bg-white/5 backdrop-blur-sm rounded-2xl p-8 border border-white/10 border-t-white/20 hover:bg-white/10 transition-all duration-500 hover:-translate-y-1 h-full">
+                  <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-6 group-hover:bg-gold-500 transition-all duration-500 shadow-lg shadow-black/20">
                     <item.icon className="w-6 h-6 text-gold-400 group-hover:text-navy-900 transition-colors duration-500" />
                   </div>
-                  <h3 className="text-lg font-display font-bold text-navy-900 mb-3">
+                  <h3 className="text-lg font-display font-bold text-white mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-sm text-charcoal-500 leading-relaxed">
+                  <p className="text-sm text-white/60 leading-relaxed group-hover:text-white/80 transition-colors">
                     {item.desc}
                   </p>
                 </div>

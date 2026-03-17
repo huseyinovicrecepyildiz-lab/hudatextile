@@ -63,19 +63,22 @@ export default function AboutPage() {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div className="relative">
-                <div className="aspect-[4/3] rounded-3xl bg-gradient-to-br from-navy-800 to-navy-900 overflow-hidden shadow-2xl">
-                  <div className="absolute inset-0 flex items-center justify-center">
+                <div 
+                  className="aspect-[4/3] rounded-3xl bg-cover bg-center overflow-hidden shadow-2xl relative"
+                  style={{ backgroundImage: "url('/images/tesis.jpg')" }}
+                >
+                  <div className="absolute inset-0 bg-navy-900/40" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/20 to-transparent" />
+                  
+                  <div className="absolute inset-0 flex items-center justify-center relative z-10">
                     <div className="text-center">
                       <div className="w-20 h-20 mx-auto rounded-2xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center mb-4 shadow-lg">
                         <Building2 className="w-10 h-10 text-navy-900" />
                       </div>
-                      <p className="text-white font-display font-bold text-2xl">5.000 m²</p>
-                      <p className="text-white/50 text-sm mt-1">{t('facilityTitle')}</p>
+                      <p className="text-white font-display font-bold text-3xl drop-shadow-lg">5.000 m²</p>
+                      <p className="text-white/80 text-sm mt-1 drop-shadow-md">{t('facilityTitle')}</p>
                     </div>
                   </div>
-                  <div className="absolute inset-0 opacity-10" style={{
-                    backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 30px, rgba(255,255,255,0.05) 30px, rgba(255,255,255,0.05) 60px)`,
-                  }} />
                 </div>
                 {/* Floating badge */}
                 <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-5 shadow-xl border border-navy-50">
