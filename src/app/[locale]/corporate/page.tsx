@@ -37,17 +37,27 @@ export default function CorporatePage() {
   return (
     <div className="page-enter">
       {/* Hero Banner */}
-      <section className="relative bg-gradient-hero pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,169,48,0.06),transparent_60%)]" />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-full mb-6">
-            <div className="w-2 h-2 bg-gold-400 rounded-full" />
+      <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-navy-900">
+        <div className="absolute inset-0">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/images/corporate-hero.jpg')" }}
+          />
+          <div className="absolute inset-0 bg-navy-900/75" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/30 to-navy-900/70" />
+          
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(212,169,48,0.1),transparent_60%)]" />
+        </div>
+
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
+          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full mb-6">
+            <div className="w-2 h-2 bg-gold-400 rounded-full shadow-[0_0_10px_rgba(212,169,48,0.8)]" />
             <span className="text-gold-400 text-sm font-medium tracking-wide">Hüda Tekstil</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-6">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-display font-bold text-white mb-6 drop-shadow-lg">
             {t('pageTitle')}
           </h1>
-          <p className="text-white/60 text-lg max-w-2xl mx-auto">
+          <p className="text-white/80 text-lg max-w-2xl mx-auto drop-shadow-md">
             {t('pageSubtitle')}
           </p>
         </div>

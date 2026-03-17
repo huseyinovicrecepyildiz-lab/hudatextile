@@ -259,12 +259,19 @@ export default function HomePage() {
       </section>
 
       {/* ===== CTA BANNER ===== */}
-      <section className="py-24 lg:py-32 bg-gradient-hero relative overflow-hidden">
+      <section className="relative py-24 lg:py-32 overflow-hidden bg-navy-900">
         <div className="absolute inset-0">
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: "url('/images/is-ortagi.jpg')" }}
+          />
+          <div className="absolute inset-0 bg-navy-900/80" />
+          <div className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-navy-900/80" />
+          
           <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-gold-500/10 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-navy-400/20 rounded-full blur-3xl" />
         </div>
-        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center z-10">
           <ScrollReveal>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-white mb-6">
               {t('cta.title')}
