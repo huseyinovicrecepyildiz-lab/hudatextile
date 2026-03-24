@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useTranslations, useLocale } from 'next-intl';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { Menu, X, ChevronDown, Globe } from 'lucide-react';
 
@@ -43,27 +44,22 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-navy-900/95 backdrop-blur-xl shadow-2xl shadow-navy-950/30 py-3'
+          ? 'bg-onyx-900/95 backdrop-blur-xl shadow-2xl shadow-onyx-950/30 py-3'
           : 'bg-transparent py-5'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center gap-3 group">
-            <div className="relative">
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-lg shadow-gold-500/25 group-hover:shadow-gold-500/40 transition-shadow duration-300">
-                <span className="text-navy-900 font-display font-bold text-lg">H</span>
-              </div>
-              <div className="absolute -top-0.5 -right-0.5 w-3 h-3 bg-gold-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 animate-pulse"></div>
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-display font-bold text-white tracking-wide leading-tight">
-                HÜDA
-              </span>
-              <span className="text-[10px] font-medium tracking-[0.35em] text-gold-400 uppercase leading-tight">
-                Tekstil
-              </span>
+          <Link href={`/${locale}`} className="flex items-center gap-3">
+            <div className="relative h-10 w-40">
+              <Image 
+                src="/logo.png" 
+                alt="Hüda Tekstil" 
+                fill 
+                className={`object-contain transition-all duration-300 ${isScrolled ? 'scale-90' : 'scale-100'}`}
+                priority
+              />
             </div>
           </Link>
 
@@ -100,7 +96,7 @@ export default function Header() {
             </button>
             <Link
               href={`/${locale}/contact`}
-              className="px-5 py-2.5 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-900 text-sm font-semibold rounded-xl hover:from-gold-400 hover:to-gold-300 transition-all duration-300 shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 hover:-translate-y-0.5"
+              className="px-5 py-2.5 bg-gradient-to-r from-gold-500 to-gold-400 text-onyx-900 text-sm font-semibold rounded-xl hover:from-gold-400 hover:to-gold-300 transition-all duration-300 shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 hover:-translate-y-0.5"
             >
               {t('requestQuote')}
             </Link>
@@ -119,7 +115,7 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden fixed inset-0 top-0 bg-navy-900/98 backdrop-blur-xl transition-all duration-500 ${
+        className={`lg:hidden fixed inset-0 top-0 bg-onyx-900/98 backdrop-blur-xl transition-all duration-500 ${
           isMobileOpen
             ? 'opacity-100 pointer-events-auto translate-y-0'
             : 'opacity-0 pointer-events-none -translate-y-4'
@@ -129,14 +125,8 @@ export default function Header() {
         <div className="flex flex-col h-full">
           {/* Mobile Header */}
           <div className="flex items-center justify-between px-4 sm:px-6 py-5">
-            <Link href={`/${locale}`} className="flex items-center gap-3" onClick={() => setIsMobileOpen(false)}>
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center">
-                <span className="text-navy-900 font-display font-bold text-lg">H</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-display font-bold text-white tracking-wide leading-tight">HÜDA</span>
-                <span className="text-[10px] font-medium tracking-[0.35em] text-gold-400 uppercase leading-tight">Tekstil</span>
-              </div>
+            <Link href={`/${locale}`} className="relative h-10 w-32" onClick={() => setIsMobileOpen(false)}>
+              <Image src="/logo.png" alt="Hüda Tekstil" fill className="object-contain" />
             </Link>
             <button
               onClick={() => setIsMobileOpen(false)}
@@ -178,7 +168,7 @@ export default function Header() {
             <Link
               href={`/${locale}/contact`}
               onClick={() => setIsMobileOpen(false)}
-              className="block text-center px-6 py-3.5 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-900 font-semibold rounded-xl shadow-lg"
+              className="block text-center px-6 py-3.5 bg-gradient-to-r from-gold-500 to-gold-400 text-onyx-900 font-semibold rounded-xl shadow-lg"
             >
               {t('requestQuote')}
             </Link>

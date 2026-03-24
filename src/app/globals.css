@@ -5,11 +5,13 @@
 @tailwind utilities;
 
 :root {
-  --navy-900: #0d1424;
-  --navy-800: #1a2848;
-  --navy-700: #273c6c;
-  --gold-500: #d4a930;
-  --gold-400: #ebc34f;
+  --onyx-950: #0a0b0d;
+  --onyx-900: #16171a;
+  --onyx-800: #2a2c30;
+  --gold-500: #b5935e;
+  --gold-400: #c5a572;
+  --silver-400: #ced4da;
+  --silver-500: #adb5bd;
 }
 
 * {
@@ -35,16 +37,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #f5f5f6;
+  background: var(--onyx-950);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #273c6c;
+  background: var(--onyx-800);
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #1a2848;
+  background: var(--onyx-900);
 }
 
 /* Glassmorphism Utilities */
@@ -57,10 +59,10 @@ body {
   }
 
   .glass-dark {
-    background: rgba(13, 20, 36, 0.75);
+    background: rgba(10, 11, 13, 0.82);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 
   .glass-card {
@@ -71,18 +73,18 @@ body {
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, #d4a930, #ebc34f, #d4a930);
+    background: linear-gradient(135deg, var(--gold-400), var(--gold-500), var(--gold-400));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .bg-gradient-hero {
-    background: linear-gradient(135deg, #0d1424 0%, #1a2848 40%, #273c6c 100%);
+    background: linear-gradient(135deg, var(--onyx-950) 0%, var(--onyx-900) 50%, var(--onyx-800) 100%);
   }
 
   .bg-gradient-section {
-    background: linear-gradient(180deg, #f0f3f9 0%, #ffffff 100%);
+    background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
   }
 
   .animate-delay-100 {

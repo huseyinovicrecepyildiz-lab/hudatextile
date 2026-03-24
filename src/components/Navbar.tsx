@@ -23,7 +23,7 @@ export default function Navbar() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b ${isScrolled
-                    ? 'bg-navy-950/90 backdrop-blur-md border-white/10 py-4 shadow-lg'
+                    ? 'bg-onyx-950/90 backdrop-blur-md border-white/10 py-4 shadow-lg'
                     : 'bg-transparent border-transparent py-6'
                 }`}
         >
@@ -57,7 +57,7 @@ export default function Navbar() {
                     <div className="hidden md:flex items-center gap-4">
                         <Link
                             href={`/${locale}/contact`}
-                            className="px-6 py-2.5 bg-gold-500 text-navy-900 text-xs font-bold rounded-full hover:bg-gold-400 transition-all shadow-lg shadow-gold-500/20 uppercase tracking-widest"
+                            className="px-6 py-2.5 bg-gold-500 text-onyx-900 text-xs font-bold rounded-full hover:bg-gold-400 transition-all shadow-lg shadow-gold-500/20 uppercase tracking-widest"
                         >
                             Teklif Al
                         </Link>
@@ -75,7 +75,7 @@ export default function Navbar() {
 
             {/* Mobil Açılır Menü (Telefonda görünür) */}
             {isMobileMenuOpen && (
-                <div className="absolute top-0 left-0 w-full h-screen bg-navy-950 flex flex-col items-center justify-center gap-8 md:hidden">
+                <div className="absolute top-0 left-0 w-full h-screen bg-onyx-950 flex flex-col items-center justify-center gap-8 md:hidden">
                     <Link onClick={() => setIsMobileMenuOpen(false)} href={`/${locale}`} className="text-2xl text-white hover:text-gold-400">Anasayfa</Link>
                     <Link onClick={() => setIsMobileMenuOpen(false)} href={`/${locale}/about`} className="text-2xl text-white hover:text-gold-400">Hakkımızda</Link>
                     <Link onClick={() => setIsMobileMenuOpen(false)} href={`/${locale}/collections`} className="text-2xl text-white hover:text-gold-400">Koleksiyonlar</Link>
