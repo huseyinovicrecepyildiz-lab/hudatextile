@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import { MapPin, Phone, Mail, Clock, Send, Loader2, CheckCircle, XCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, Loader2, CheckCircle, XCircle, Globe } from 'lucide-react';
 import ScrollReveal from '@/components/ScrollReveal';
 
 export default function ContactPage() {
@@ -38,6 +38,17 @@ export default function ContactPage() {
     { icon: Phone, label: '', value: t('phoneValue') },
     { icon: Mail, label: '', value: t('emailValue') },
     { icon: Clock, label: t('workingHours'), value: t('workingHoursValue') },
+    { 
+      icon: Globe, 
+      label: t('websites'), 
+      value: (
+        <div className="flex flex-col gap-1">
+          <a href="https://www.hudatex.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold-400 transition-colors">www.hudatex.com</a>
+          <a href="https://www.hudatextile.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold-400 transition-colors">www.hudatextile.com</a>
+          <a href="https://www.hudatekstil.com" target="_blank" rel="noopener noreferrer" className="hover:text-gold-400 transition-colors">www.hudatekstil.com</a>
+        </div>
+      ) 
+    },
   ];
 
   return (
@@ -173,6 +184,22 @@ export default function ContactPage() {
               </ScrollReveal>
             </div>
           </div>
+
+          {/* Google Maps Embed */}
+          <ScrollReveal delay={300}>
+            <div className="mt-16 rounded-2xl overflow-hidden shadow-xl border border-navy-100 h-[450px]">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3006.3161257186907!2d28.864964076762888!3d41.10578651341399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab1d11d7d89d5%3A0x1f9fbf4744b8945e!2sU%C4%9Fur%20Mumcu%2C%20Atat%C3%BCrk%20Blv%20No.46%2FB%2C%2034270%20Sultangazi%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1774448171217!5m2!1str!2str"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Google Maps"
+              />
+            </div>
+          </ScrollReveal>
         </div>
       </section>
     </>

@@ -96,7 +96,7 @@
     "exportDesc": "25'ten fazla ülkeye düzenli ihracat gerçekleştiren firmamız, global tedarik zincirinde güvenilir bir iş ortağıdır.",
     "wholesaleTitle": "Çalışma Prensipleri",
     "wholesaleDesc": "B2B odaklı çalışma modelimiz ile perakende markaları, toptancılar ve özel etiket (private label) iş ortaklarımıza özel çözümler sunuyoruz.",
-    "wholesaleFeature1": "Minimum 500 adet sipariş",
+    "wholesaleFeature1": "Minimum sipariş adet sınırı yoktur",
     "wholesaleFeature2": "Private label üretim",
     "wholesaleFeature3": "Özel kumaş ve tasarım seçenekleri",
     "wholesaleFeature4": "FOB ve CIF teslimat seçenekleri"
@@ -121,7 +121,8 @@
     "phoneValue": "+90 (212) 618 30 89",
     "emailValue": "info@hudatekstil.com",
     "workingHours": "Çalışma Saatleri",
-    "workingHoursValue": "Pazartesi - Cumartesi: 08:00 - 18:00"
+    "workingHoursValue": "Pazartesi - Cumartesi: 08:00 - 18:00",
+    "websites": "Web Sitelerimiz"
   },
   "footer": {
     "description": "Takım elbise, kumaş ceket ve kumaş pantolon üretiminde uzman kadromuz ile global pazara kaliteli ürünler sunuyoruz.",

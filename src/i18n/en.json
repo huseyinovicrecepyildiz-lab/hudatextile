@@ -96,7 +96,7 @@
     "exportDesc": "Our company, which regularly exports to more than 25 countries, is a reliable business partner in the global supply chain.",
     "wholesaleTitle": "Working Principles",
     "wholesaleDesc": "With our B2B-focused business model, we offer tailored solutions to retail brands, wholesalers, and private label business partners.",
-    "wholesaleFeature1": "Minimum 500 units per order",
+    "wholesaleFeature1": "No minimum order quantity",
     "wholesaleFeature2": "Private label production",
     "wholesaleFeature3": "Custom fabric and design options",
     "wholesaleFeature4": "FOB and CIF delivery options"
@@ -121,7 +121,8 @@
     "phoneValue": "+90 (212) 618 30 89",
     "emailValue": "info@hudatekstil.com",
     "workingHours": "Working Hours",
-    "workingHoursValue": "Monday - Saturday: 08:00 - 18:00"
+    "workingHoursValue": "Monday - Saturday: 08:00 - 18:00",
+    "websites": "Our Websites"
   },
   "footer": {
     "description": "We offer quality products to the global market with our expert team in the manufacturing of suits, fabric jackets, and fabric trousers.",
