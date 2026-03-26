@@ -21,8 +21,8 @@ export default function CollectionsPage() {
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/collections-hero.jpg" alt="" fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-navy-900/80" />
+          <Image src="/images/collections-hero.jpg" alt="Collections Hero" fill className="object-cover" priority />
+          <div className="absolute inset-0 img-gradient-overlay" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">{t('title')}</h1>
@@ -36,7 +36,7 @@ export default function CollectionsPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {items.map((item, i) => (
               <ScrollReveal key={i} delay={i * 150}>
-                <div className="group relative bg-navy-50 rounded-2xl overflow-hidden hover-lift">
+                <div className="group relative bg-onyx-50 rounded-2xl overflow-hidden hover-lift">
                   <div className="aspect-[3/4] relative overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-t from-navy-900/90 via-navy-900/40 to-transparent z-10" />
                     <Image src="/images/collections-hero.jpg" alt={item.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -46,7 +46,7 @@ export default function CollectionsPage() {
                     <p className="text-white/60 text-sm mb-6 leading-relaxed">{item.desc}</p>
                     <Link
                       href={`/${locale}/contact`}
-                      className="inline-flex items-center gap-2 px-6 py-3 bg-gold-500/20 border border-gold-500/30 text-gold-400 text-sm font-medium rounded-xl hover:bg-gold-500 hover:text-navy-900 transition-all duration-300"
+                      className="inline-flex items-center gap-2 px-6 py-3 bg-gold-500/20 border border-onyx-100/30 text-gold-400 text-sm font-medium rounded-xl hover:bg-gold-500 hover:text-onyx-900 transition-all duration-300"
                     >
                       {t('viewCollection')}
                       <ArrowRight className="w-4 h-4" />

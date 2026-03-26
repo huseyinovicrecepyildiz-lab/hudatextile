@@ -5,9 +5,9 @@
 @tailwind utilities;
 
 :root {
-  --onyx-950: #0a0b0d;
-  --onyx-900: #16171a;
-  --onyx-800: #2a2c30;
+  --onyx-950: #0d0b0a;
+  --onyx-900: #1a1614;
+  --onyx-800: #2d2724;
   --gold-500: #D4A930;
   --gold-400: #F2D06B;
   --silver-400: #ced4da;
@@ -59,10 +59,15 @@ body {
   }
 
   .glass-dark {
-    background: rgba(10, 11, 13, 0.82);
+    background: rgba(13, 11, 10, 0.85); /* Onyx-950 variant */
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .img-gradient-overlay {
+    background: linear-gradient(135deg, rgba(13, 11, 10, 0.9) 0%, rgba(212, 169, 48, 0.35) 100%);
+    mix-blend-mode: normal;
   }
 
   .glass-card {

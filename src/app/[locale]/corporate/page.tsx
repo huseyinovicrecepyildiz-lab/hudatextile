@@ -27,8 +27,8 @@ export default function CorporatePage() {
       {/* Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
-          <Image src="/images/corporate-hero.jpg" alt="" fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-navy-900/80" />
+          <Image src="/images/corporate-hero.jpg" alt="Corporate Hero" fill className="object-cover" priority />
+          <div className="absolute inset-0 img-gradient-overlay" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">{t('pageTitle')}</h1>
@@ -40,14 +40,14 @@ export default function CorporatePage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <h2 className="text-3xl font-display font-bold text-navy-900 mb-4">{t('productionTitle')}</h2>
+            <h2 className="text-3xl font-display font-bold text-onyx-900 mb-4">{t('productionTitle')}</h2>
             <p className="text-charcoal-500 max-w-3xl mb-12">{t('productionDesc')}</p>
           </ScrollReveal>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step, i) => (
               <ScrollReveal key={i} delay={i * 100}>
-                <div className="group bg-navy-50 rounded-2xl overflow-hidden hover-lift h-full flex flex-col">
+                <div className="group bg-onyx-50 rounded-2xl overflow-hidden hover-lift h-full flex flex-col">
                   <div className="relative h-48 w-full overflow-hidden">
                     <Image 
                       src={
@@ -60,16 +60,16 @@ export default function CorporatePage() {
                       fill 
                       className="object-cover group-hover:scale-110 transition-transform duration-700" 
                     />
-                    <div className="absolute inset-0 bg-navy-900/20" />
+                    <div className="absolute inset-0 img-gradient-overlay" />
                   </div>
                   <div className="p-6">
-                    <div className="w-10 h-10 rounded-lg bg-navy-900 flex items-center justify-center mb-4">
+                    <div className="w-10 h-10 rounded-lg bg-onyx-900 flex items-center justify-center mb-4">
                       <step.icon className="w-5 h-5 text-gold-400" />
                     </div>
                     <div className="text-xs font-semibold text-gold-600 mb-2 uppercase tracking-wider">
                       {String(i + 1).padStart(2, '0')}
                     </div>
-                    <h3 className="text-lg font-semibold text-navy-900 mb-2">{step.title}</h3>
+                    <h3 className="text-lg font-semibold text-onyx-900 mb-2">{step.title}</h3>
                     <p className="text-charcoal-500 text-sm leading-relaxed">{step.desc}</p>
                   </div>
                 </div>
@@ -85,15 +85,15 @@ export default function CorporatePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <ScrollReveal>
               <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg h-full flex flex-col">
-                <div className="relative h-48 w-full overflow-hidden">
-                  <Image src="/images/quality-control.png" alt={t('qualityTitle')} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-navy-900/20" />
-                </div>
+                  <div className="relative h-48 w-full">
+                    <Image src="/images/quality-control.png" alt="Cutting" fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 img-gradient-overlay" />
+                  </div>
                 <div className="p-8">
-                  <div className="w-14 h-14 rounded-xl bg-navy-900 flex items-center justify-center mb-6">
+                  <div className="w-14 h-14 rounded-xl bg-onyx-900 flex items-center justify-center mb-6">
                     <BarChart3 className="w-7 h-7 text-gold-400" />
                   </div>
-                  <h3 className="text-2xl font-display font-bold text-navy-900 mb-4">{t('qualityTitle')}</h3>
+                  <h3 className="text-2xl font-display font-bold text-onyx-900 mb-4">{t('qualityTitle')}</h3>
                   <p className="text-charcoal-500 leading-relaxed">{t('qualityDesc')}</p>
                 </div>
               </div>
@@ -101,15 +101,15 @@ export default function CorporatePage() {
 
             <ScrollReveal delay={150}>
               <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg h-full flex flex-col">
-                <div className="relative h-48 w-full overflow-hidden">
-                  <Image src="/images/is-ortagi.jpg" alt={t('exportTitle')} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 bg-navy-900/20" />
+                <div className="relative h-80 w-full mb-6 rounded-2xl overflow-hidden shadow-lg border border-onyx-100 group">
+                  <Image src="/images/is-ortagi.jpg" alt="Export Logistics" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 img-gradient-overlay" />
                 </div>
                 <div className="p-8">
-                  <div className="w-14 h-14 rounded-xl bg-navy-900 flex items-center justify-center mb-6">
+                  <div className="w-14 h-14 rounded-xl bg-onyx-900 flex items-center justify-center mb-6">
                     <Globe className="w-7 h-7 text-gold-400" />
                   </div>
-                  <h3 className="text-2xl font-display font-bold text-navy-900 mb-4">{t('exportTitle')}</h3>
+                  <h3 className="text-2xl font-display font-bold text-onyx-900 mb-4">{t('exportTitle')}</h3>
                   <p className="text-charcoal-500 leading-relaxed">{t('exportDesc')}</p>
                 </div>
               </div>

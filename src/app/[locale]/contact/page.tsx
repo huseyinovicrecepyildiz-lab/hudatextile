@@ -57,7 +57,7 @@ export default function ContactPage() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/contact-hero.jpg" alt="" fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-navy-900/80" />
+          <div className="absolute inset-0 img-gradient-overlay" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">{t('pageTitle')}</h1>
@@ -71,8 +71,8 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="lg:col-span-3">
               <ScrollReveal>
-                <div className="bg-navy-50 rounded-2xl p-8">
-                  <h2 className="text-2xl font-display font-bold text-navy-900 mb-6">{t('formTitle')}</h2>
+                <div className="bg-onyx-50 rounded-2xl p-8">
+                  <h2 className="text-2xl font-display font-bold text-onyx-900 mb-6">{t('formTitle')}</h2>
 
                   {status === 'success' && (
                     <div className="flex items-center gap-3 bg-green-50 text-green-700 rounded-xl p-4 mb-6">
@@ -96,7 +96,7 @@ export default function ContactPage() {
                         required
                         value={form.name}
                         onChange={(e) => setForm({ ...form, name: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 placeholder-charcoal-400 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl border border-onyx-200 bg-white text-onyx-900 placeholder-charcoal-400 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
                       />
                       <input
                         type="email"
@@ -104,7 +104,7 @@ export default function ContactPage() {
                         required
                         value={form.email}
                         onChange={(e) => setForm({ ...form, email: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 placeholder-charcoal-400 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl border border-onyx-200 bg-white text-onyx-900 placeholder-charcoal-400 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
                       />
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -113,14 +113,14 @@ export default function ContactPage() {
                         placeholder={t('company')}
                         value={form.company}
                         onChange={(e) => setForm({ ...form, company: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 placeholder-charcoal-400 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl border border-onyx-200 bg-white text-onyx-900 placeholder-charcoal-400 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
                       />
                       <input
                         type="tel"
                         placeholder={t('phone')}
                         value={form.phone}
                         onChange={(e) => setForm({ ...form, phone: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 placeholder-charcoal-400 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl border border-onyx-200 bg-white text-onyx-900 placeholder-charcoal-400 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
                       />
                     </div>
                     <input
@@ -128,7 +128,7 @@ export default function ContactPage() {
                       placeholder={t('subject')}
                       value={form.subject}
                       onChange={(e) => setForm({ ...form, subject: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 placeholder-charcoal-400 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
+                      className="w-full px-4 py-3 rounded-xl border border-onyx-200 bg-white text-onyx-900 placeholder-charcoal-400 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors"
                     />
                     <textarea
                       placeholder={t('message')}
@@ -136,12 +136,12 @@ export default function ContactPage() {
                       rows={5}
                       value={form.message}
                       onChange={(e) => setForm({ ...form, message: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-navy-200 bg-white text-navy-900 placeholder-charcoal-400 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors resize-none"
+                      className="w-full px-4 py-3 rounded-xl border border-onyx-200 bg-white text-onyx-900 placeholder-charcoal-400 focus:outline-none focus:border-gold-500 focus:ring-1 focus:ring-gold-500 transition-colors resize-none"
                     />
                     <button
                       type="submit"
                       disabled={status === 'sending'}
-                      className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-900 font-semibold rounded-xl hover:from-gold-400 hover:to-gold-300 transition-all duration-300 shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 hover:-translate-y-0.5 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                      className="w-full sm:w-auto px-8 py-3.5 bg-gradient-to-r from-gold-500 to-gold-400 text-onyx-900 font-semibold rounded-xl hover:from-gold-400 hover:to-gold-300 transition-all duration-300 shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 hover:-translate-y-0.5 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
                     >
                       {status === 'sending' ? (
                         <>
@@ -187,7 +187,7 @@ export default function ContactPage() {
 
           {/* Google Maps Embed */}
           <ScrollReveal delay={300}>
-            <div className="mt-16 rounded-2xl overflow-hidden shadow-xl border border-navy-100 h-[450px]">
+            <div className="mt-16 rounded-2xl overflow-hidden shadow-xl border border-onyx-100 h-[450px]">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3006.3161257186907!2d28.864964076762888!3d41.10578651341399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab1d11d7d89d5%3A0x1f9fbf4744b8945e!2sU%C4%9Fur%20Mumcu%2C%20Atat%C3%BCrk%20Blv%20No.46%2FB%2C%2034270%20Sultangazi%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1774448171217!5m2!1str!2str"
                 width="100%"

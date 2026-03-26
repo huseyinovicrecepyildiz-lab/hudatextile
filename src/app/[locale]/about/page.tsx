@@ -28,7 +28,7 @@ export default function AboutPage() {
       <section className="relative pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/hakkimizda-hero.jpg" alt="" fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-navy-900/80" />
+          <div className="absolute inset-0 img-gradient-overlay" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl font-display font-bold text-white mb-4">{t('pageTitle')}</h1>
@@ -40,7 +40,7 @@ export default function AboutPage() {
       <section className="py-24 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
-            <h2 className="text-3xl font-display font-bold text-navy-900 mb-8">{t('historyTitle')}</h2>
+            <h2 className="text-3xl font-display font-bold text-onyx-900 mb-8">{t('historyTitle')}</h2>
             <div className="space-y-6 text-charcoal-600 leading-relaxed">
               <p>{t('historyP1')}</p>
               <p>{t('historyP2')}</p>
@@ -60,10 +60,10 @@ export default function AboutPage() {
                   <Image src="/images/tesis.jpg" alt="Üretim Tesisi" fill className="object-cover" />
                 </div>
                 <div className="p-8">
-                <div className="w-14 h-14 rounded-xl bg-navy-900 flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-xl bg-onyx-900 flex items-center justify-center mb-6">
                   <Factory className="w-7 h-7 text-gold-400" />
                 </div>
-                <h3 className="text-2xl font-display font-bold text-navy-900 mb-4">{t('facilityTitle')}</h3>
+                <h3 className="text-2xl font-display font-bold text-onyx-900 mb-4">{t('facilityTitle')}</h3>
                 <p className="text-charcoal-500 mb-6 leading-relaxed">{t('facilityDesc')}</p>
                 <ul className="space-y-3">
                   {facilityFeatures.map((f, i) => (
@@ -83,10 +83,10 @@ export default function AboutPage() {
                   <Image src="/images/factory-sewing.png" alt="Uzman Kadromuz" fill className="object-cover" />
                 </div>
                 <div className="p-8">
-                <div className="w-14 h-14 rounded-xl bg-navy-900 flex items-center justify-center mb-6">
+                <div className="w-14 h-14 rounded-xl bg-onyx-900 flex items-center justify-center mb-6">
                   <Users className="w-7 h-7 text-gold-400" />
                 </div>
-                <h3 className="text-2xl font-display font-bold text-navy-900 mb-4">{t('teamTitle')}</h3>
+                <h3 className="text-2xl font-display font-bold text-onyx-900 mb-4">{t('teamTitle')}</h3>
                 <p className="text-charcoal-500 mb-6 leading-relaxed">{t('teamDesc')}</p>
                 <ul className="space-y-3">
                   {teamFeatures.map((f, i) => (

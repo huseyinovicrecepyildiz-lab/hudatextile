@@ -20,7 +20,7 @@ export default function HomePage() {
   const collections = [
     { name: t('collections.suits'), desc: t('collections.suitsDesc'), img: '/images/suits-detail.png' },
     { name: t('collections.jackets'), desc: t('collections.jacketsDesc'), img: '/images/collections-hero.jpg' },
-    { name: t('collections.trousers'), desc: t('collections.trousersDesc'), img: '/images/hero-bg.jpg' },
+    { name: t('collections.trousers'), desc: t('collections.trousersDesc'), img: '/images/hero-bg.svg' },
   ];
 
   const reasons = [
@@ -36,13 +36,13 @@ export default function HomePage() {
       <section className="relative min-h-screen flex items-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <Image src="/images/hero-bg.jpg" alt="Hüda Tekstil" fill className="object-cover" priority />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy-900/95 via-navy-900/80 to-navy-900/60" />
+          <Image src="/images/hero-bg.svg" alt="Hüda Tekstil" fill className="object-cover" priority />
+          <div className="absolute inset-0 img-gradient-overlay" />
         </div>
         {/* Background decoration */}
         <div className="absolute inset-0 opacity-30">
           <div className="absolute top-1/4 right-0 w-96 h-96 bg-gold-500/10 rounded-full blur-3xl" />
-          <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-navy-500/20 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-1/4 w-72 h-72 bg-onyx-500/20 rounded-full blur-3xl" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
@@ -64,7 +64,7 @@ export default function HomePage() {
             <div className="flex flex-wrap gap-4 animate-fade-in-up animate-delay-300">
               <Link
                 href={`/${locale}/collections`}
-                className="px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-900 font-semibold rounded-xl hover:from-gold-400 hover:to-gold-300 transition-all duration-300 shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 hover:-translate-y-0.5 flex items-center gap-2"
+                className="px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-400 text-onyx-900 font-semibold rounded-xl hover:from-gold-400 hover:to-gold-300 transition-all duration-300 shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 hover:-translate-y-0.5 flex items-center gap-2"
               >
                 {t('hero.cta1')}
                 <ArrowRight className="w-4 h-4" />
@@ -104,7 +104,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-display font-bold text-navy-900 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-display font-bold text-onyx-900 mb-4">
                 {t('collections.title')}
               </h2>
               <p className="text-charcoal-500 max-w-2xl mx-auto">{t('collections.subtitle')}</p>
@@ -115,8 +115,8 @@ export default function HomePage() {
             {collections.map((col, i) => (
               <ScrollReveal key={i} delay={i * 150}>
                 <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover-lift">
-                  <div className="aspect-[4/5] bg-navy-100 relative overflow-hidden">
-                    <div className="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-navy-900/20 to-transparent z-10" />
+                  <div className="aspect-[4/5] bg-onyx-100 relative overflow-hidden">
+                    <div className="absolute inset-0 img-gradient-overlay z-10" />
                     <Image src={col.img} alt={col.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
                   <div className="absolute bottom-0 left-0 right-0 p-6 z-20">
@@ -154,18 +154,18 @@ export default function HomePage() {
               <ScrollReveal key={i} delay={i * 100}>
                 <div className="group glass-card rounded-2xl overflow-hidden hover-lift h-full flex flex-col">
                   <div className="relative h-40 w-full overflow-hidden">
-                    <Image 
+                    <Image
                       src={
-                        i === 0 ? '/images/quality-control.png' : 
-                        i === 1 ? '/images/is-ortagi.jpg' : 
-                        i === 2 ? '/images/factory-sewing.png' : 
-                        '/images/factory-cutting.png'
-                      } 
-                      alt={r.title} 
-                      fill 
-                      className="object-cover group-hover:scale-110 transition-transform duration-700" 
+                        i === 0 ? '/images/quality-control.png' :
+                          i === 1 ? '/images/is-ortagi.jpg' :
+                            i === 2 ? '/images/factory-sewing.png' :
+                              '/images/factory-cutting.png'
+                      }
+                      alt={r.title}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-700"
                     />
-                    <div className="absolute inset-0 bg-navy-900/40" />
+                    <div className="absolute inset-0 img-gradient-overlay" />
                     <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-gold-500/20 backdrop-blur-md flex items-center justify-center border border-gold-500/20">
                       <r.icon className="w-6 h-6 text-gold-400" />
                     </div>
@@ -185,7 +185,7 @@ export default function HomePage() {
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0">
           <Image src="/images/is-ortagi.jpg" alt="Business Partner" fill className="object-cover" />
-          <div className="absolute inset-0 bg-navy-900/85" />
+          <div className="absolute inset-0 img-gradient-overlay" />
         </div>
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollReveal>
@@ -195,7 +195,7 @@ export default function HomePage() {
             <p className="text-white/60 mb-10 max-w-xl mx-auto">{t('cta.subtitle')}</p>
             <Link
               href={`/${locale}/contact`}
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-400 text-navy-900 font-semibold rounded-xl hover:from-gold-400 hover:to-gold-300 transition-all duration-300 shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-gold-500 to-gold-400 text-onyx-900 font-semibold rounded-xl hover:from-gold-400 hover:to-gold-300 transition-all duration-300 shadow-lg shadow-gold-500/20 hover:shadow-gold-500/40 hover:-translate-y-0.5"
             >
               {t('cta.button')}
               <ArrowRight className="w-5 h-5" />
